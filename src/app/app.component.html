@@ -1,0 +1,26 @@
+<div class="container">
+  <h2 class="text-center">All Data Details </h2>
+  <!-- https://api.covid19india.org/misc.json -->
+  <!-- this is api of all data -->
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Sr. No</th>
+        <th scope="col">Population</th>
+        <th scope="col">District</th>
+        <th scope="col">State</th>
+        <th scope="col">Statecode</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let allapidata of allDataofpopulation">
+        <th scope="row">{{allapidata.slno}}</th>
+        <td>{{allapidata.population}}</td>
+        <td>{{allapidata.district}}</td>
+        <td>{{allapidata.state}}</td>
+        <td>{{allapidata.statecode}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<router-outlet></router-outlet>
